@@ -1,6 +1,7 @@
 const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorsBtn = document.querySelector("#scissors");
+const resultDiv = document.querySelector("#result");
 
 function disableButtons() {
     const buttons = document.querySelectorAll("button"); 
@@ -24,9 +25,6 @@ scissorsBtn.addEventListener("click", (event) => {
 
 
 })
-
-const resultDiv = document.querySelector("#result");
-
 
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3);
@@ -116,19 +114,5 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
-function playGame(){
-    
-    // for(let i=0;i<5;i++){
-    //     playRound(getHumanChoice(),getComputerChoice());
-    // }
-
-    if(humanScore > computerScore){
-        console.log("Human Win!");
-    }
-    else{
-        console.log("Computer Win!");
-    }
-
-}
 
 
